@@ -1,0 +1,72 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 2 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Sunny\Projects\benchmark-dotnet\sealed-keyword\bin\Release\net5.0\dfc07b68-0d32-4d66-bdee-8873ef2fb850
+// command took 1.93s and exited with 0
+// start dotnet  build -c Release --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Sunny\Projects\benchmark-dotnet\sealed-keyword\bin\Release\net5.0\dfc07b68-0d32-4d66-bdee-8873ef2fb850
+// command took 4.05s and exited with 0
+// ***** Done, took 00:00:06 (6.22 sec)   *****
+// Found 2 benchmarks:
+//   BenchMarks.OpenVoid: DefaultJob
+//   BenchMarks.SealedVoid: DefaultJob
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: BenchMarks.OpenVoid: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet dfc07b68-0d32-4d66-bdee-8873ef2fb850.dll --benchmarkName sealed_keyword.BenchMarks.OpenVoid --job Default --benchmarkId 0 in C:\Sunny\Projects\benchmark-dotnet\sealed-keyword\bin\Release\net5.0\dfc07b68-0d32-4d66-bdee-8873ef2fb850\bin\Release\net5.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 5.0.5 (5.0.521.16609), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 247800.00 ns, 247.8000 us/op
+WorkloadJitting  1: 1 op, 190400.00 ns, 190.4000 us/op
+
+OverheadJitting  2: 16 op, 408700.00 ns, 25.5437 us/op
+WorkloadJitting  2: 16 op, 412200.00 ns, 25.7625 us/op
+
+WorkloadPilot    1: 16 op, 800.00 ns, 50.0000 ns/op
+WorkloadPilot    2: 32 op, 800.00 ns, 25.0000 ns/op
+WorkloadPilot    3: 64 op, 1300.00 ns, 20.3125 ns/op
+WorkloadPilot    4: 128 op, 1800.00 ns, 14.0625 ns/op
+WorkloadPilot    5: 256 op, 2400.00 ns, 9.3750 ns/op
+WorkloadPilot    6: 512 op, 3300.00 ns, 6.4453 ns/op
+WorkloadPilot    7: 1024 op, 6000.00 ns, 5.8594 ns/op
+WorkloadPilot    8: 2048 op, 11300.00 ns, 5.5176 ns/op
+WorkloadPilot    9: 4096 op, 22400.00 ns, 5.4688 ns/op
+WorkloadPilot   10: 8192 op, 49800.00 ns, 6.0791 ns/op
+WorkloadPilot   11: 16384 op, 86900.00 ns, 5.3040 ns/op
+WorkloadPilot   12: 32768 op, 288900.00 ns, 8.8165 ns/op
+WorkloadPilot   13: 65536 op, 615100.00 ns, 9.3857 ns/op
+WorkloadPilot   14: 131072 op, 727800.00 ns, 5.5527 ns/op
+WorkloadPilot   15: 262144 op, 1860200.00 ns, 7.0961 ns/op
+WorkloadPilot   16: 524288 op, 3129400.00 ns, 5.9689 ns/op
+WorkloadPilot   17: 1048576 op, 6086300.00 ns, 5.8043 ns/op
+WorkloadPilot   18: 2097152 op, 13105500.00 ns, 6.2492 ns/op
+WorkloadPilot   19: 4194304 op, 22980200.00 ns, 5.4789 ns/op
+WorkloadPilot   20: 8388608 op, 46447700.00 ns, 5.5370 ns/op
+WorkloadPilot   21: 16777216 op, 99810300.00 ns, 5.9492 ns/op
+WorkloadPilot   22: 33554432 op, 94688500.00 ns, 2.8219 ns/op
+WorkloadPilot   23: 67108864 op, 185273100.00 ns, 2.7608 ns/op
+WorkloadPilot   24: 134217728 op, 368844400.00 ns, 2.7481 ns/op
+WorkloadPilot   25: 268435456 op, 755014200.00 ns, 2.8126 ns/op
+
+OverheadWarmup   1: 268435456 op, 581748300.00 ns, 2.1672 ns/op
+OverheadWarmup   2: 268435456 op, 554828000.00 ns, 2.0669 ns/op
+OverheadWarmup   3: 268435456 op, 592390100.00 ns, 2.2068 ns/op
+OverheadWarmup   4: 268435456 op, 558806100.00 ns, 2.0817 ns/op
+OverheadWarmup   5: 268435456 op, 568083100.00 ns, 2.1163 ns/op
+OverheadWarmup   6: 268435456 op, 559268000.00 ns, 2.0834 ns/op
+
+OverheadActual   1: 268435456 op, 580009900.00 ns, 2.1607 ns/op
+OverheadActual   2: 268435456 op, 571724900.00 ns, 2.1298 ns/op
+OverheadActual   3: 268435456 op, 563774300.00 ns, 2.1002 ns/op
+OverheadActual   4: 268435456 op, 568159700.00 ns, 2.1166 ns/op
+OverheadActual   5: 268435456 op, 553006900.00 ns, 2.0601 ns/op
+OverheadActual   6: 268435456 op, 560134100.00 ns

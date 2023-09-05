@@ -1,0 +1,11 @@
+// Validating benchmarks:
+//    * Assembly span-test which defines benchmarks is non-optimized
+Benchmark was built without optimization enabled (most probably a DEBUG configuration). Please, build it in RELEASE.
+If you want to debug the benchmarks, please see https://benchmarkdotnet.org/articles/guides/troubleshooting.html#debugging-benchmarks.
+
+// Benchmark Benchy.DateSeperated: DefaultJob
+//    * Benchmarked method `DateSeperated` is static. Benchmarks MUST be instance methods, static methods are not supported.
+
+// Benchmark Benchy.DateSeperatedSpan: DefaultJob
+//    * Benchmarked method `DateSeperatedSpan` is static. Benchmarks MUST be instance methods, static methods are not supported.
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>BenchmarkLINQPerformance-20230529-214457</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.13.2, OS=Windows 10 (10.0.19045.2965)
+Intel Core i5-7200U CPU 2.50GHz (Kaby Lake), 1 CPU, 4 logical and 2 physical cores
+.NET SDK=5.0.202
+  [Host]     : .NET 5.0.5 (5.0.521.16609), X64 RyuJIT AVX2
+  DefaultJob : .NET 5.0.5 (5.0.521.16609), X64 RyuJIT AVX2
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>   Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Gen0</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>SingleOrDefault</td><td>476.9 ns</td><td>1.96 ns</td><td>1.73 ns</td><td>0.0248</td><td>40 B</td>
+</tr><tr><td>FirstOrDefault</td><td>253.2 ns</td><td>4.25 ns</td><td>5.52 ns</td><td>0.0253</td><td>40 B</td>
+</tr><tr><td>First</td><td>257.1 ns</td><td>1.20 ns</td><td>0.94 ns</td><td>0.0253</td><td>40 B</td>
+</tr><tr><td>Single</td><td>497.1 ns</td><td>9.75 ns</td><td>13.01 ns</td><td>0.0248</td><td>40 B</td>
+</tr></tbody></table>
+</body>
+</html>
